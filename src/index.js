@@ -14,6 +14,10 @@ async function run() {
     let jsonObj = jsonUtils.read_json_file(jsonPath)
 
     console.log(jsonObj)
+
+    _.forEach(jsonObj, function( value, key) {
+        console.log(key, value, key.type)
+    })
     
     envObj.add_env_variable('FULL_NAME', 'JOHN DOE')
     envObj.add_env_variable('STATE', 'Virginia')
