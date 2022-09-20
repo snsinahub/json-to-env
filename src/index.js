@@ -18,7 +18,7 @@ async function run() {
     
     envObj.add_env_variable('FULL_NAME', 'JOHN DOE')
     envObj.add_env_variable('STATE', 'Virginia')
-    envObj.add_env_variable('CITY', 'Arlington')
+    envObj.add_env_variable('CITY', 'Washington')
     // fs.appendFileSync(filePath, `FULL_NAME=JOHN DOE${os.EOL}`, {
     //     encoding: 'utf8'
     // })
