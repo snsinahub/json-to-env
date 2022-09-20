@@ -14,9 +14,9 @@ function add_env_variable(name, val) {
 async function run() {
     const jsonPath = core.getInput('json_path')
     
-    add_env_variable(FULL_NAME, 'JOHN DOE')
-    add_env_variable(STATE, 'Virginia')
-    add_env_variable(CITY, 'Arlington')
+    add_env_variable('FULL_NAME', 'JOHN DOE')
+    add_env_variable('STATE', 'Virginia')
+    add_env_variable('CITY', 'Arlington')
     // fs.appendFileSync(filePath, `FULL_NAME=JOHN DOE${os.EOL}`, {
     //     encoding: 'utf8'
     // })
