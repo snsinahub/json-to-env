@@ -16,14 +16,8 @@ async function run() {
     console.log(jsonObj)
 
     _.forEach(jsonObj, function( key, value) {
-        console.log(key)
-        console.log(value)
-        console.log(typeof key, typeof value)
         if (typeof key == 'object') {
             _.forEach(key, function( sub_key, sub_value) {
-                console.log(sub_key)
-                console.log(sub_value)
-                console.log(typeof sub_key, typeof sub_value)
                 envObj.add_env_variable(sub_value, sub_key)
             })
         } else {
