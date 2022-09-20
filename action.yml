@@ -1,0 +1,14 @@
+name: JSON TO ENV
+description: Read JSON file and export as Actions environment variables
+inputs:
+  json_path:
+    required: false
+    default: ''
+
+outputs:
+  envs:
+    description: environment variables
+
+runs:
+  using: "node16"
+  main: src/index.js
