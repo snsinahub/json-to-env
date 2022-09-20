@@ -24,10 +24,10 @@ async function run() {
                 console.log(sub_key)
                 console.log(sub_value)
                 console.log(typeof sub_key, typeof sub_value)
-                envObj.add_env_variable(sub_key, sub_value)
+                envObj.add_env_variable(sub_value, sub_key)
             })
         } else {
-            envObj.add_env_variable(key, value)
+            envObj.add_env_variable(value, sub_value)
         }
     })
     
