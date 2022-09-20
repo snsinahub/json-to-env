@@ -16,7 +16,7 @@ async function run() {
     console.log(jsonObj)
 
     _.forEach(jsonObj, function( value, key) {
-        console.log(key, value, key.type)
+        console.log(key)
     })
     
     envObj.add_env_variable('FULL_NAME', 'JOHN DOE')
