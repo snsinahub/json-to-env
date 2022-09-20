@@ -14,7 +14,7 @@ const filePath = process.env[`GITHUB_ENV`]
 
 async function run() {
     const jsonPath = core.getInput('json_path')
-    const envObj = new add_env(filePath)
+    const envObj = new add_env.addToEnv(filePath)
     
     envObj.add_env_variable('FULL_NAME', 'JOHN DOE')
     envObj.add_env_variable('STATE', 'Virginia')
