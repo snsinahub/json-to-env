@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const github = require('@actions/github');
 const core = require('@actions/core');
-const add_env = require('/libs/add_env_variables.js')
+const add_env = require('./libs/add_env_variables.js')
 // const fs = require('fs');
 // const os = require('os');
 const filePath = process.env[`GITHUB_ENV`]
