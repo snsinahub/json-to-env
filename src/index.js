@@ -27,7 +27,7 @@ async function run() {
                 envObj.add_env_variable(sub_value, sub_key)
             })
         } else {
-            envObj.add_env_variable(value, sub_value)
+            envObj.add_env_variable(value, key)
         }
     })
     
