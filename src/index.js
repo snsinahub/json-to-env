@@ -19,6 +19,13 @@ async function run() {
         console.log(key)
         console.log(value)
         console.log(typeof key, typeof value)
+        if (typeof key == 'object') {
+            _.forEach(key, function( sub_key, sub_value) {
+                console.log(sub_key)
+                console.log(sub_value)
+                console.log(typeof sub_key, typeof sub_value)
+            })
+        }
     })
     
     envObj.add_env_variable('FULL_NAME', 'JOHN DOE')
