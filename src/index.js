@@ -2,26 +2,22 @@ const _ = require('lodash')
 const github = require('@actions/github');
 const core = require('@actions/core');
 const add_env = require('./libs/add_env_variables.js')
-// const fs = require('fs');
-// const os = require('os');
-const filePath = process.env[`GITHUB_ENV`]
+const json_utils = require('./libs/json_utils.js')
 
-// function add_env_variable(name, val) {
-//     fs.appendFileSync(filePath, `${name}=${val}${os.EOL}`, {
-//         encoding: 'utf8'
-//     })
-// }
+const filePath = process.env[`GITHUB_ENV`]
 
 async function run() {
     const jsonPath = core.getInput('json_path')
     const envObj = new add_env.addToEnv(filePath)
+    const jsonUtils = new json_utils.json_utils()
+
+    let jsonObj = jsonUtils.read_json_file(jsonPath)
+
+    console.log(jsonObj)
     
     envObj.add_env_variable('FULL_NAME', 'JOHN DOE')
     envObj.add_env_variable('STATE', 'Virginia')
-    envObj.add_env_variable('CITY', 'Washington')
-    // fs.appendFileSync(filePath, `FULL_NAME=JOHN DOE${os.EOL}`, {
-    //     encoding: 'utf8'
-    // })
+    envObj.add_env_variable('CITY', 'Washington')    
 
     core.setOutput("envs", 'snsinas')
 
