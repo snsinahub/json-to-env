@@ -12,8 +12,7 @@ async function run() {
     const jsonUtils = new json_utils.json_utils()
 
     let jsonObj = jsonUtils.read_json_file(jsonPath)
-
-    console.log(jsonObj)
+    
 
     _.forEach(jsonObj, function( key, value) {
         if (typeof key == 'object') {
@@ -24,12 +23,8 @@ async function run() {
             envObj.add_env_variable(value, key)
         }
     })
-    
-    envObj.add_env_variable('FULL_NAME', 'JOHN DOE')
-    envObj.add_env_variable('STATE', 'Virginia')
-    envObj.add_env_variable('CITY', 'Washington')    
-
-    core.setOutput("envs", 'snsinas')
+       
+    core.setOutput("envs", '')
 
 }
 
