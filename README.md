@@ -21,9 +21,6 @@ This action reads environment variables from a JSON file and add them as GitHub 
 
 ## Examples
 
-
-### Use default values
-
 ```YAML
 - name: checkout
   uses: actions/checkout@v3
