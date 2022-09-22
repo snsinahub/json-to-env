@@ -2,7 +2,7 @@ name: JSON TO ENV
 description: Read JSON file and export as Actions environment variables
 inputs:
   json_path:
-    required: false
+    required: true
     default: ''
 
 outputs:
