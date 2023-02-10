@@ -10,7 +10,7 @@ This action reads environment variables from a JSON file and add them as GitHub 
 
 ## Inputs
 ```YAML
-  - uses: snsinahub/json-to-env@v1.0.0
+  - uses: snsinahub/json-to-env@v1.1.0
     with: 
       # path to json file 
       # default: ''
