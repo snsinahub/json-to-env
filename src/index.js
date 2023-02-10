@@ -3,6 +3,8 @@ const github = require('@actions/github');
 const core = require('@actions/core');
 const add_env = require('./libs/add_env_variables.js')
 const json_utils = require('./libs/json_utils.js')
+const fs = require('fs');
+
 
 const filePath = process.env[`GITHUB_ENV`]
 
@@ -23,9 +25,7 @@ async function run() {
             envObj.add_env_variable(value, key)
         }
     })
-       
-    core.setOutput("envs", '')
-
+    fs.appendFileSync(process.env.GITHUB_OUTPUT, "vars=" + JSON.stringify(envObj));
 }
 
 run();
