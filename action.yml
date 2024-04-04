@@ -10,5 +10,5 @@ outputs:
     description: environment variables
 
 runs:
-  using: "node16"
+  using: "node20"
   main: src/index.js
